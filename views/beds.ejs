@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #F0F2F4;">
+    <div class="container pt-5">
+        <!-- <form action=""> -->
+            <select required id="locality-dropdown" class="custom-select shadow mb-2 ">
+            </select>
+        <!-- </form> -->
+
+    </div>
+    <div class="container pt-5">
+        <div class="heading mb-5"><h3>Result</h3></div>
+        <div class="row">
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>ruralHospitals</h6>
+                    <p id="ruralHospitals"></p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>ruralBeds</h6>
+                    <p id="ruralBeds"></p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>urbanHospitals</h6>
+                    <p id="urbanHospitals"></p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>urbanBeds</h6>
+                    <p id="urbanBeds"></p>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="container pt-2">
+        
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>totalHospitals</h6>
+                    <p id="totalHospitals"></p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>totalBeds</h6>
+                    <p id="totalBeds"></p>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="container pt-5">
+        <div class="heading mb-5"><h3>Summary</h3></div>
+        <div class="row">
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>ruralHospitalstotal</h6>
+                    <p id="ruralHospitalstotal"></p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>ruralBedstotal</h6>
+                    <p id="ruralBedstotal"></p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>urbanHospitalstotal</h6>
+                    <p id="urbanHospitalstotal"></p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>urbanBedstotal</h6>
+                    <p id="urbanBedstotal"></p>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="container pt-2">
+        
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>totalHospitalstotal</h6>
+                    <p id="totalHospitalstotal"></p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="shadow p-3 mb-5 bg-white rounded border-1 card p-3 text-center">
+                    <h6>totalBedstotal</h6>
+                    <p id="totalBedstotal"></p>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+
+    let dropdown = document.getElementById('locality-dropdown');
+    dropdown.length = 0;
+
+    let defaultOption = document.createElement('option');
+    defaultOption.text = 'Choose State/Province';
+
+    dropdown.add(defaultOption);
+    dropdown.selectedIndex = 0;
+    var xhttp = new XMLHttpRequest();
+    var url = "https://api.rootnet.in/covid19-in/hospitals/beds"
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         
+            var body = JSON.parse(this.responseText);
+            var data = body.data.regional;
+            console.log(body.data.regional);
+            var totalBedstotal = document.getElementById('totalBedstotal');
+            var totalHospitalstotal = document.getElementById('totalHospitalstotal');
+            var urbanBedstotal = document.getElementById('urbanBedstotal');
+            var urbanHospitalstotal = document.getElementById('urbanHospitalstotal');
+            var ruralBedstotal = document.getElementById('ruralBedstotal');
+            var ruralHospitalstotal = document.getElementById('ruralHospitalstotal');
+            totalBedstotal.innerHTML = body.data.summary.totalBeds;
+            totalHospitalstotal.innerHTML = body.data.summary.totalHospitals;
+            urbanBedstotal.innerHTML = body.data.summary.urbanBeds;
+            urbanHospitalstotal.innerHTML = body.data.summary.urbanHospitals;
+            ruralBedstotal.innerHTML = body.data.summary.ruralBeds;
+            ruralHospitalstotal.innerHTML = body.data.summary.ruralHospitals;
+
+            let option;
+            for (let i = 0; i < data.length; i++) {
+            option = document.createElement('option');
+            option.text = data[i].state;
+            option.value = data[i].state;
+            dropdown.add(option);
+            }
+            
+    }
+    };
+    xhttp.open("get", url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+
+dropdown.addEventListener('change',function(event){
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         
+            var body = JSON.parse(this.responseText);
+            var show = document.getElementById('show');
+            var data = body.data.regional;
+            var totalBeds = document.getElementById('totalBeds');
+            var totalHospitals = document.getElementById('totalHospitals');
+            var urbanBeds = document.getElementById('urbanBeds');
+            var urbanHospitals = document.getElementById('urbanHospitals');
+            var ruralBeds = document.getElementById('ruralBeds');
+            var ruralHospitals = document.getElementById('ruralHospitals');
+            
+            for (let i = 0; i < data.length; i++) {
+                if(data[i].state==event.target.value){
+                    console.log(data[i]);
+                    
+                    // show.innerHTML = data[i].state;
+                    totalBeds.innerHTML = data[i].totalBeds;
+                    totalHospitals.innerHTML = data[i].totalHospitals;
+                    urbanBeds.innerHTML = data[i].urbanBeds;
+                    urbanHospitals.innerHTML = data[i].urbanHospitals;
+                    ruralBeds.innerHTML = data[i].ruralBeds;
+                    ruralHospitals.innerHTML = data[i].ruralHospitals;
+
+
+                }
+            }
+            
+    }
+    };
+    xhttp.open("get", url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+})
+    // https://intense-island-29669.herokuapp.com/submitted
+
+
+</script>
+</body>
+</html>

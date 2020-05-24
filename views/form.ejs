@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid Helper</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/stylesheets/form.css">
+</head>
+<body>
+    <div id="progress"></div>
+
+    <div class="header">
+       
+        <!-- <h2 id="ccs">Fill the form</h2> -->
+    </div>
+    <div class="center">
+    <div id="register">
+
+        <i id="previousButton" class="ion-android-arrow-back"></i>
+        <i id="forwardButton" class="ion-android-arrow-forward"></i>
+
+        <div id="inputContainer">
+        <input id="inputField" required multiple />
+        <label id="inputLabel"></label>
+
+
+
+        <div id="checkgender">
+                    <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="radio" id="male" name="gender" value="0">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">Male</div>
+                    </div>
+                    <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="radio" id="male" name="gender" value="1">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">Female</div>
+                    </div>
+                    <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="radio" id="male" name="gender" value="2">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">Other</div>
+                    </div>
+        </div>
+        <div id="checkinc">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="income" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No Income</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="income" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Low</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="income" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Med</div>
+            </div>
+            <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="radio" id="male" name="income" value="3">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="input-title">High</div>
+            </div>
+            <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="radio" id="male" name="income" value="4">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="input-title">Gov Inc</div>
+            </div>
+        </div>
+
+        <div id="checksmk">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="smoking" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Never</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="smoking" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Quit</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="smoking" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>
+        </div>
+        <div id="checkbt">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="bloodtype" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Unknown</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="bloodtype" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">AB negative</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="bloodtype" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">AB positive</div>
+            </div>
+            <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="radio" id="male" name="bloodtype" value="3">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="input-title">A negative</div>
+                </div>
+                <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="radio" id="male" name="bloodtype" value="4">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="input-title">A Positive</div>
+                </div>
+                <div class="checkbox-container">
+                <label class="checkbox-label">
+                    <input type="radio" id="male" name="bloodtype" value="5">
+                    <span class="checkbox-custom rectangular"></span>
+                </label>
+                <div class="input-title">B Negative</div>
+                </div>
+                <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="radio" id="male" name="bloodtype" value="6">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">B positive</div>
+                </div>
+                <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="radio" id="male" name="bloodtype" value="7">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">O  negative</div>
+                </div>
+                <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="radio" id="male" name="bloodtype" value="8">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">O positive</div>
+                </div>
+        </div>
+        <div id="checkins">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+        </div>
+        <div id="checkwork">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Never</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Home</div>
+            </div>  
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Stopped</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="3">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Travel Critical</div>
+            </div>  
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="insurance" value="4">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Travel Non critical</div>
+            </div>
+            
+        </div>
+        <div id="checkssd">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="ssd" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Never</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="ssd" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Sometimes</div>
+            </div>  
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="ssd" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Regularly</div>
+            </div>
+            
+        </div>
+        <div id="checkswh">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="swh" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Never</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="swh" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Sometimes</div>
+            </div>  
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="swh" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Regularly</div>
+            </div>
+            
+        </div>
+        <div id="checkhsd">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hsd" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Never</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hsd" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Sometimes</div>
+            </div>  
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hsd" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Regularly</div>
+            </div>
+            
+        </div>
+        <div id="checkhwh">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hwh" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Never</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hwh" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Sometimes</div>
+            </div>  
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hwh" value="2">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Regularly</div>
+            </div>
+            
+        </div>
+        <div id="checksym">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="symptoms" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="symptoms" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkconinf">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="coninf" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="coninf" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkasthma">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="asthma" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="asthma" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkkid">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="kidney" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="kidney" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkliver">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="liver" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="liver" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkimm">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="immune" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="immune" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkheart">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="heart" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="heart" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checklung">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="lung" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="lung" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkdiabetes">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="diabetes" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="diabetes" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkhiv">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hiv" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hiv" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkht">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="ht" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="ht" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkothr">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="othr" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="othr" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checknurs">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="nurs" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="nurs" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        <div id="checkhlth">
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hlth" value="0">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">No</div>
+            </div>
+            <div class="checkbox-container">
+            <label class="checkbox-label">
+                <input type="radio" id="male" name="hlth" value="1">
+                <span class="checkbox-custom rectangular"></span>
+            </label>
+            <div class="input-title">Yes</div>
+            </div>  
+            
+        </div>
+        
+<div id="checkboxes">
+                    <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="chkbx1">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">Technical</div>
+                    </div>
+                    <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="chkbx2">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">Management</div>
+                    </div>
+                    <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="chkbx3">
+                        <span class="checkbox-custom rectangular"></span>
+                    </label>
+                    <div class="input-title">Design</div>
+                    </div>
+        </div>
+
+
+
+
+
+
+        <div id="inputProgress"></div>
+        </div>
+
+    </div>
+    </div>
+
+
+<form action="" hidden id="ccsform">
+   
+    <input type="text" name="fname">
+    <input type="text" name="regno">
+    <input type="text" name="email">
+    <input type="text" name="phone">
+    <input type="text" name="wphone">
+</form>
+
+
+    <script>
+
+var questions = [
+  {question:"What's your full name?"},
+//   {question:"What's your register number", pattern: /[a-zA-Z0-9]{9}/},
+//   {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
+//   {question:"What's your phone number?"},
+//   {question:"What's your whatsapp number?"},
+//   {question:"What's your domain of interest?", type: "check"},
+
+  {question:"What's your gender?",type:"checkgen"},
+  {question:"What's your age?",type:"number"},
+  {question:"What's your height(cms)?",type:"number"},
+  {question:"What's your weight(kgs)?",type:"number"},
+  {question:"Whats your income",type:"checkinc"},
+  {question:"Do you smoke?",type:"checksmk"},
+  {question:"How many times have you consumed alcohol in this 14days?",type:"number"},
+  {question:"Blood type",type:"checkbt"},
+ {question:"Do you have insurance?",type:"checkins"},
+  {question:"How many times have you been contacted with someone?",type:"number"},
+  {question:"How many members in house?",type:"number"},
+ {question:"No. of times you've used public transport in past week",type:"number"},
+  {question:"Are you working?",type:"checkwork"},
+  {question:"Self Social Distancing",type:"checkssd"},
+ {question:"Self Washing Hands",type:"checkswh"},
+ {question:"House Social Distancing",type:"checkhsd"},
+  {question:"House Washing Hands",type:"checkhwh"},
+  {question:"No. of sanitizers",type:"number"},
+{question:"No. of masks",type:"number"},
+ {question:"Are you showing any symptoms",type:"checksym"},
+  {question:"Have you been in contacts with an infected person?",type:"checkconinf"},
+  {question:"History of Asthma",type:"checkasthma"},
+{question:"History of Kidney Disease",type:"checkkid"},
+ {question:"History of Liver Disease",type:"checkliver"},
+  {question:"Compromised Immune System?",type:"checkimm"},
+  {question:"History of Heart Disease",type:"checkheart"},
+{question:"History of Lung Disease",type:"checklung"},
+ {question:"Diabetic?",type:"checkdiabetes"},
+  {question:"HIV Positive?",type:"checkhiv"},
+  {question:"Hypertension>",type:"checkht"},
+{question:"Other Chronic",type:"checkothr"},
+  {question:"Do you work in a Nursing Home",type:"checknurs"},
+  {question:"Are you a Health Worker",type:"checkhlth"}
+
+]
+
+
+/*
+  do something after the questions have been answered
+*/
+function displayRadioValue(name,n) { 
+        
+            var ele = document.getElementsByName(name); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                  
+                  
+                    if(ele[i].checked) {
+                        questions[n].answer = ele[i].value;
+                        console.log(ele[i].value)
+                        console.log(questions);
+                        
+                        }
+            } 
+        }
+var onComplete = function() {
+    displayRadioValue("gender",1);
+            displayRadioValue("income",5);
+            displayRadioValue("smoking",6);
+            displayRadioValue("bloodtype",8);
+            displayRadioValue("insurance",9);
+            displayRadioValue("work",13);
+            displayRadioValue("ssd",14);
+            displayRadioValue("swh",15);
+            displayRadioValue("hsd",16);
+            displayRadioValue("hwh",17);
+            displayRadioValue("symptoms",20);
+            displayRadioValue("coninf",21);
+            displayRadioValue("asthma",22);
+            displayRadioValue("kidney",23);
+            displayRadioValue("liver",24);
+            displayRadioValue("immune",25);
+            displayRadioValue("heart",26);
+            displayRadioValue("lung",27);
+            displayRadioValue("diabetes",28);
+            displayRadioValue("hiv",29);
+            displayRadioValue("ht",30);
+            displayRadioValue("other",31);
+            displayRadioValue("nurs",32);
+            displayRadioValue("hlth",33);
+            
+    var data = "gen="+questions[1].answer+"&age="+questions[2].answer+"&hgt="+questions[3].answer+"&wgt="+questions[4].answer+"&inc="+questions[5].answer+"&smk="+questions[6].answer+"&alc="+questions[7].answer+"&bt="+questions[8].answer+"&ins="+questions[9].answer+"&concnt="+questions[10].answer+"&hcnt="+questions[11].answer+"&ptrnspt="+questions[12].answer+"&wrkng="+questions[13].answer+"&ssocdis="+questions[14].answer+"&swashnds="+questions[15].answer+"&hsocdis="+questions[16].answer+"&hwashnds="+questions[17].answer+"&san="+questions[18].answer+"&masks="+questions[19].answer+"&sym="+questions[20].answer+"&coninf="+questions[21].answer+"&asthma="+questions[22].answer+"&kidney="+questions[23].answer+"&liver="+questions[24].answer+"&cmpimm="+questions[25].answer+"&heart="+questions[26].answer+"&lung="+questions[27].answer+"&diabetes="+questions[28].answer+"&hiv="+questions[29].answer+"&hyprt="+questions[30].answer+"&otherchr="+questions[31].answer+"&nrsng="+questions[32].answer+"&hwork="+questions[33].answer
+    // "fname=" + questions[0].answer + "&regno=" + questions[1].answer + "&email=" + questions[2].answer + "&phone=" + questions[3].answer + "&wphone=" + questions[4].answer;
+
+    // var chkbx1 = document.getElementById('chkbx1').checked;
+    // var chkbx2 = document.getElementById('chkbx2').checked;
+    // var chkbx3 = document.getElementById('chkbx3').checked;
+
+    // if(chkbx1) data+= "&chkbx1=Technical";
+    // if(chkbx2) data+= "&chkbx2=Management";
+    // if(chkbx3) data+= "&chkbx3=Design";
+
+
+    var xhttp = new XMLHttpRequest();
+    var url = "https://risk-death-covid19-apiherokuapp.com/deathandrisk?"
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        if(this.responseText){
+            var h1 = document.createElement('h1')
+            var data = JSON.parse(this.responseText);
+            var death = data.death;
+            var risk = data.risk;
+            h1.appendChild(document.createTextNode(questions[0].answer + ' , You have '+risk+"% getting affected and "+death+"% of mortality risk"))
+            setTimeout(function() {
+            register.parentElement.appendChild(h1)
+            setTimeout(function() { h1.style.opacity = 1 }, 50)
+            }, 1000)
+        } 
+        // else{
+        //     var h1 = document.createElement('h1')
+        //     h1.appendChild(document.createTextNode('There\'s some error with your registration'));
+        //     setTimeout(function() {
+        //     register.parentElement.appendChild(h1)
+        //     setTimeout(function() { h1.style.opacity = 1 }, 50)
+        //     }, 1000)
+        // }
+
+    }
+    };
+    xhttp.open("get", url+data, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+
+    // https://intense-island-29669.herokuapp.com/submitted
+}
+
+;(function(questions, onComplete) {
+
+    var tTime = 100 // transition transform time from #register in ms
+    var wTime = 200 // transition width time from #register in ms
+    var eTime = 1000 // transition width time from inputLabel in ms
+
+    // init
+    // --------------
+    if (questions.length == 0) return
+
+    var position = 0
+
+    putQuestion()
+
+    forwardButton.addEventListener('click', validate)
+    inputField.addEventListener('keyup', function(e) {
+        transform(0, 0) // ie hack to redraw
+        if (e.keyCode == 13) validate()
+    })
+
+    previousButton.addEventListener('click', function(e) {
+        if (position === 0) return
+        position -= 1
+        hideCurrent(putQuestion)
+    })
+
+
+    // functions
+    // --------------
+
+    // load the next question
+    function putQuestion() {
+        inputLabel.innerHTML = questions[position].question
+
+        if(questions[position].type == "check2"){
+            document.getElementById('checkboxes').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkgen"){
+            document.getElementById('checkgender').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+            // questions[position].answer = document.getElementsByName('gender').value;
+            
+
+        } else if(questions[position].type == "checkinc"){
+            document.getElementById('checkinc').style.display="block";
+            inputField.style.display="none";
+
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+            // console.log( document.getElementsByName('gender').checked);
+
+        } else if(questions[position].type == "checksmk"){
+            document.getElementById('checksmk').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkbt"){
+            document.getElementById('checkbt').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkins"){
+            document.getElementById('checkins').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkwork"){
+            document.getElementById('checkwork').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+            
+        }else if(questions[position].type == "checkssd"){
+            document.getElementById('checkssd').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkswh"){
+            document.getElementById('checkswh').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkhsd"){
+            document.getElementById('checkhsd').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+            
+        }else if(questions[position].type == "checkhwh"){
+            document.getElementById('checkhwh').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checksym"){
+            document.getElementById('checksym').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkconinf"){
+            document.getElementById('checkconinf').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkasthma"){
+            document.getElementById('checkasthma').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkkid"){
+            document.getElementById('checkkid').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkliver"){
+            document.getElementById('checkliver').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkimm"){
+            document.getElementById('checkimm').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkheart"){
+            document.getElementById('checkheart').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checklung"){
+            document.getElementById('checklung').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkdiabetes"){
+            document.getElementById('checkdiabetes').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkhiv"){
+            document.getElementById('checkhiv').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkht"){
+            document.getElementById('checkht').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checkothr"){
+            document.getElementById('checkothr').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+
+        }else if(questions[position].type == "checknurs"){
+            document.getElementById('checknurs').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+            
+        }else if(questions[position].type == "checkhlth"){
+            document.getElementById('checkhlth').style.display="block";
+            inputField.style.display="none";
+            document.getElementById('inputProgress').style.display="none";
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+         
+
+
+        }else{
+            document.getElementById('checkboxes').style.display="none";
+            document.getElementById('checkgender').style.display="none";
+            document.getElementById('checkinc').style.display="none";
+            document.getElementById('checksmk').style.display="none";
+            document.getElementById('checkbt').style.display="none";
+            document.getElementById('checkins').style.display="none";
+            document.getElementById('checkwork').style.display="none";
+            document.getElementById('checkssd').style.display="none";
+            document.getElementById('checkswh').style.display="none";
+            document.getElementById('checkhsd').style.display="none";
+            document.getElementById('checkhwh').style.display="none";
+            document.getElementById('checksym').style.display="none";
+            document.getElementById('checkconinf').style.display="none";
+            document.getElementById('checkasthma').style.display="none";
+            document.getElementById('checkkid').style.display="none";
+            document.getElementById('checkimm').style.display="none";
+            document.getElementById('checkheart').style.display="none";
+            document.getElementById('checklung').style.display="none";
+            document.getElementById('checkdiabetes').style.display="none";
+            document.getElementById('checkhiv').style.display="none";
+            document.getElementById('checkht').style.display="none";
+            document.getElementById('checkothr').style.display="none";
+            document.getElementById('checknurs').style.display="none";
+            document.getElementById('checkhlth').style.display="none";
+            document.getElementById('checkliver').style.display="none";
+
+            inputField.style.display="block";
+            document.getElementById('inputProgress').style.display="block";
+
+        inputField.type = questions[position].type || 'text'
+        inputField.value = questions[position].answer || ''
+        inputField.focus()
+
+        }
+
+
+        // set the progress of the background
+        progress.style.width = position * 100 / questions.length + '%'
+
+        previousButton.className = position ? 'ion-android-arrow-back' : 'ion-person'
+
+        showCurrent()
+
+    }
+
+    // when submitting the current question
+    function validate() {
+
+        var validateCore = function() {
+          return inputField.value.match(questions[position].pattern || /.+/)
+        }
+
+        if (!questions[position].validate) questions[position].validate = validateCore
+
+        // check if the pattern matches
+        if (!questions[position].validate()) wrong(inputField.focus.bind(inputField))
+        else ok(function() {
+
+            // execute the custom end function or the default value set
+            if (questions[position].done) questions[position].done()
+            else questions[position].answer = inputField.value
+
+            ++position
+
+            // if there is a new question, hide current and load next
+            if (questions[position]) hideCurrent(putQuestion)
+            else hideCurrent(function() {
+                // remove the box if there is no next question
+                register.className = 'close'
+                progress.style.width = '100%'
+
+                onComplete()
+
+            })
+
+        })
+
+    }
+
+
+    // helper
+    // --------------
+
+    function hideCurrent(callback) {
+        inputContainer.style.opacity = 0
+        inputLabel.style.marginLeft = 0
+        inputProgress.style.width = 0
+        inputProgress.style.transition = 'none'
+        inputContainer.style.border = null
+        setTimeout(callback, wTime)
+    }
+
+    function showCurrent(callback) {
+        inputContainer.style.opacity = 1
+        inputProgress.style.transition = ''
+        inputProgress.style.width = '100%'
+        setTimeout(callback, wTime)
+    }
+
+    function transform(x, y) {
+        register.style.transform = 'translate(' + x + 'px ,  ' + y + 'px)'
+    }
+
+    function ok(callback) {
+        register.className = ''
+        setTimeout(transform, tTime * 0, 0, 10)
+        setTimeout(transform, tTime * 1, 0, 0)
+        setTimeout(callback, tTime * 2)
+    }
+
+    function wrong(callback) {
+        register.className = 'wrong'
+        for (var i = 0; i < 6; i++) // shaking motion
+            setTimeout(transform, tTime * i, (i % 2 * 2 - 1) * 20, 0)
+        setTimeout(transform, tTime * 6, 0, 0)
+        setTimeout(callback, tTime * 7)
+    }
+
+}(questions, onComplete))
+
+    </script>
+</body>
+</html>
