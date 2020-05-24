@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+   <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/dashboard.css">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   
+  <body>
+    <div class="container py-5">
+      <div class="row">
+    
+        <!-- For demo purpose -->
+        <div class="col-lg-12 mx-auto mb-5 text-white text-center">
+          <h1 class="display-4">COVID HELPER</h1>
+          <p class="lead mb-0">Predict your risk of getting affected and mortality </p>
+          <p class="lead">Back to main screen<a href="/" class="text-white">
+                    <u>here</u></a>
+          </p>
+        </div>
+        <!-- END -->
+    
+        <div class="col-xl-6 col-lg-6 mb-4">
+          <div class="bg-white rounded-lg p-5 shadow">
+            <h2 class="h6 font-weight-bold text-center mb-4">Morbity Risk</h2>
+    
+            <!-- Progress bar 1 -->
+            <div class="progress mx-auto" data-value='<%=risk%>'>
+              <span class="progress-left">
+                            <span class="progress-bar border-primary"></span>
+              </span>
+              <span class="progress-right">
+                            <span class="progress-bar border-primary"></span>
+              </span>
+              <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                <div class="h2 font-weight-bold"><%=risk%><sup class="small">%</sup></div>
+              </div>
+            </div>
+            <!-- END -->
+    
+            <!-- Demo info -->
+            <div class="row text-center mt-4">
+              <!-- <div class="col-12 border-right">
+                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Accuracy</span>
+              </div> -->
+              <div class="col-12">
+                <div class="h4 font-weight-bold mb-0"><%=riskacc%>%</div><span class="small text-gray">Accuracy</span>
+              </div>
+            </div>
+            <!-- END -->
+          </div>
+        </div>
+    
+        <div class="col-xl-6 col-lg-6 mb-4">
+          <div class="bg-white rounded-lg p-5 shadow">
+            <h2 class="h6 font-weight-bold text-center mb-4">Mortality Risk</h2>
+    
+            <!-- Progress bar 2 -->
+            <div class="progress mx-auto" data-value='<%=death%>'>
+              <span class="progress-left">
+                            <span class="progress-bar border-danger"></span>
+              </span>
+              <span class="progress-right">
+                            <span class="progress-bar border-danger"></span>
+              </span>
+              <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                <div class="h2 font-weight-bold"><%=death%><sup class="small">%</sup></div>
+              </div>
+            </div>
+            <!-- END -->
+    
+            <!-- Demo info-->
+            <div class="row text-center mt-4">
+              <!-- <div class="col-6 border-right">
+                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Accuracy</span>
+              </div>
+              <div class="col-6">
+                <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Any other attribute</span>
+              </div> -->
+              <div class="col-12">
+                <div class="h4 font-weight-bold mb-0"><%=deathacc%>%</div><span class="small text-gray">Accuracy</span>
+              </div>
+            </div>
+            <!-- END -->
+          </div>
+        </div>
+    
+   
+          </div>
+        </div>
+      </div>
+    </div>   
+ <script>
+    $(function() {
+
+$(".progress").each(function() {
+
+  var value = $(this).attr('data-value');
+  var left = $(this).find('.progress-left .progress-bar');
+  var right = $(this).find('.progress-right .progress-bar');
+
+  if (value > 0) {
+    if (value <= 50) {
+      right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+    } else if(value>100){
+        right.css('transform', 'rotate(180deg)')
+        left.css('transform', 'rotate(' + percentageToDegrees(100 - 50) + 'deg)')
+    } else {
+      right.css('transform', 'rotate(180deg)')
+      left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+    }
+  }
+
+})
+
+function percentageToDegrees(percentage) {
+
+  return percentage / 100 * 360
+
+}
+
+});
+    </script>
+  </body>
+</html>

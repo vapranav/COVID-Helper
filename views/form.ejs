@@ -716,20 +716,25 @@ var onComplete = function() {
 
 
     var xhttp = new XMLHttpRequest();
-    var url = "https://risk-death-covid19-apiherokuapp.com/deathandrisk?"
+    var url = "https://risk-death-covid19-api.herokuapp.com/deathandrisk?"
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
         if(this.responseText){
             var h1 = document.createElement('h1')
             var data = JSON.parse(this.responseText);
-            var death = data.death;
-            var risk = data.risk;
-            h1.appendChild(document.createTextNode(questions[0].answer + ' , You have '+risk+"% getting affected and "+death+"% of mortality risk"))
-            setTimeout(function() {
-            register.parentElement.appendChild(h1)
-            setTimeout(function() { h1.style.opacity = 1 }, 50)
-            }, 1000)
+            var death = Math.floor(data.death);
+            var risk = Math.floor(data.risk);
+            var deathacc = Math.floor( data["Accuracy for death risk test set"]);
+            var riskacc =  Math.floor( data["Accuracy for covid risk test set"]);
+            var xhttp = new XMLHttpRequest();
+           
+            window.location.replace("result/"+risk+"/"+death+"/"+riskacc+"/"+deathacc);
+            // h1.appendChild(document.createTextNode(questions[0].answer + ' , You have '+risk+"% getting affected and "+death+"% of mortality risk"))
+            // setTimeout(function() {
+            // register.parentElement.appendChild(h1)
+            // setTimeout(function() { h1.style.opacity = 1 }, 50)
+            // }, 1000)
         } 
         // else{
         //     var h1 = document.createElement('h1')

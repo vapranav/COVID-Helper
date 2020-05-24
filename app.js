@@ -16,7 +16,12 @@ app.get("/form", function(req, res){
 app.get("/beds", function(req, res){
 	res.render("beds");
 })
-
+// app.get("/result",function(req,res){
+// 	res.render("dashboard")
+// })
+app.get("/result/:risk/:death/:riskacc/:deathacc",function(req,res){
+	res.render("dashboard",{risk:req.params.risk,death:req.params.death,riskacc:req.params.riskacc,deathacc:req.params.deathacc})
+})
 // app.get("/results", function(req, res){
 // 	var query = req.query.search;
 // 	var url = "http://www.omdbapi.com/?s=" + query +"&apikey=thewdb";
